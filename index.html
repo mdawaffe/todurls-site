@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>TodURLs</title>
+	<link rel="stylesheet" href="css/todurls.css">
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="js/underscore.js"></script>
+	<script src="js/backbone.js"></script>
+	<script src="//js.simperium.com/v0.1/"></script>
+	<script src="//simperium.com/js/backbone-simperium.js"></script>
+	<script src="js/todurls.js"></script>
+	<script>
+	jQuery( function() {
+		window.TodURLsClient.initialize();
+	} );
+	</script>
+</head>
+
+<body>
+
+<h1>TodURLs</h1>
+
+<div id="todurls">
+	<ul id="todurls-list"></ul>
+</div>
+
+<script type="text/template" id="template-todurl">
+<% if ( image ) { %>
+<img src="<%- image %>" width="180" />
+<span></span>
+<% } else { %>
+<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="180" height="1" />
+<% } %>
+<div>
+	<h2><a href="<%- url %>" target="_blank"><%- title ? title : url %></a></h2>
+	<% if ( description ) { %>
+	<p><%- description %></p>
+	<% } %>
+</div>
+</script>
+
+</body>
+
+</html>
