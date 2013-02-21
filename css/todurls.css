@@ -58,6 +58,10 @@ h1 {
 	margin-bottom: 1em;
 }
 
+#get-started, #help {
+	display: none;
+}
+
 .todurl {
 	margin: 1em 0;
 	clear: both;
